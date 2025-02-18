@@ -1,0 +1,12 @@
+{
+  "name": "kkw-website-training-project-main",
+  "version": "1.0.0",
+  "description": "i made this for training and education purpose #Please Do not Steal This Project And Make IT Yours",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
