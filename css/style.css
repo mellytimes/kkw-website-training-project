@@ -129,6 +129,7 @@ ul li:hover a:before {
     flex: 1 0 100%;
     max-width: 100%;
     height: auto;
+    object-fit: contain;
     scroll-snap-align: start;
 }
 
@@ -237,6 +238,14 @@ ul li:hover a:before {
 .social-link i {
     font-size: 18px;
     margin-right: 10px;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    margin-right: 8px;
+    vertical-align: middle;
 }
 
 .social-link.facebook {
