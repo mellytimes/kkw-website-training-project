@@ -1,0 +1,224 @@
+/* Universal CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-size: 100%;
+}
+
+/* Body */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #53bfed;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo img {
+    height: 50px;
+    width: auto;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin-left: 15px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #fff;
+    color: #53bfed;
+    border-radius: 5px;
+}
+
+.navbar ul li a.active {
+    background-color: #004080;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Menu Toggle for Mobile */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* History Container */
+.history-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.history-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #004080;
+    font-weight: 700;
+}
+
+.history-content {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.history-container p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.history-container img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Social Media Buttons */
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+}
+
+.social-link i {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.social-link.facebook {
+    background-color: #4267B2;
+}
+
+.social-link.facebook:hover {
+    background-color: #365899;
+    transform: scale(1.05);
+}
+
+.social-link.youtube {
+    background-color: #ff0000;
+}
+
+.social-link.youtube:hover {
+    background-color: #ff5555;
+    transform: scale(1.05);
+}
+
+.social-link.สพฐ {
+    background-color: #0d6e00;
+}
+
+.social-link.สพฐ:hover {
+    background-color: #3ad142;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .navbar ul {
+        display: flex;
+        flex-direction: row;
+        background: none;
+        position: static;
+        width: auto;
+        padding: 0;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .history-title {
+        font-size: 1.8rem;
+    }
+
+    .history-container {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        background: #004080;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px;
+        padding: 10px 0;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    .navbar ul.active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .social-buttons {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
